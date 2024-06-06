@@ -17,9 +17,9 @@ http
             'Content-Type': 'text/html',
           });
           response.write(data);
-          return response.end();
+          response.end();
         });
-        return;
+        return; // cannot move response.end() here
       }
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.write(data);
